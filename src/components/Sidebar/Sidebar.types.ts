@@ -1,4 +1,4 @@
-export interface UsersProps {
+export interface SidebarProps {
   id?: string;
   className?: string;
 }

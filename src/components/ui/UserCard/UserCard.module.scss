@@ -1,0 +1,39 @@
+.UserCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #111827;
+  border: 0.5px solid #e5e7eb;
+  padding: 1rem;
+  gap: 2rem;
+  height: auto;
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: aquamarine;
+  }
+  .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    .name {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .message {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+}

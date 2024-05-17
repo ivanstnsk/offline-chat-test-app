@@ -1,23 +1,23 @@
 import { FC } from "react";
 import { Redirect, Route, Switch } from "wouter";
 
-import Container from "@/components/ui/Container";
+import Sidebar from "@/components/Sidebar";
 
-import Users from "./Users";
 import Chat from "./Chat";
 import { UserProps } from "./User.types.ts";
+import s from "./User.module.scss";
 
 const UserRedirect = () => <Redirect to="/" />;
 
 const User: FC<UserProps> = () => {
   return (
-    <Container>
+    <div className={s.User}>
+      <Sidebar />
       <Switch>
-        <Route path="/" component={Users as any} />
-        <Route path="/chat" component={Chat as any} />
+        <Route path="/chat/:id" component={Chat as any} />
         <Route path="/*" component={UserRedirect} />
       </Switch>
-    </Container>
+    </div>
   );
 };
 
